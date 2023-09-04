@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: taskmaster
+  namespace: flask
   labels:
     app: taskmaster
 spec:
@@ -11,6 +12,7 @@ spec:
       app: taskmaster
   template:
     metadata:
+      namespace: flask
       labels:
         app: taskmaster
     spec:
